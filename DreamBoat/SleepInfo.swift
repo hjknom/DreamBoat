@@ -95,6 +95,7 @@ struct SleepInfo: View {
         .buttonStyle(.borderedProminent)
         .buttonBorderShape(.roundedRectangle)
         .controlSize(.large)
+        .tint(Color(red: 0.707, green: 0.742, blue: 0.925))
     }
     
     struct SleepInfo_Previews: PreviewProvider {
