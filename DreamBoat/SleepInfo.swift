@@ -90,12 +90,14 @@ struct SleepInfo: View {
                 .frame(maxWidth: .infinity)
         }
         .font(.subheadline)
+        .fontWeight(.bold)
         .frame(width: 350, height: 50.0)
         .foregroundColor(.black)
         .buttonStyle(.borderedProminent)
         .buttonBorderShape(.roundedRectangle)
         .controlSize(.large)
         .tint(Color(red: 0.707, green: 0.742, blue: 0.925))
+        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 3))
     }
     
     struct SleepInfo_Previews: PreviewProvider {
