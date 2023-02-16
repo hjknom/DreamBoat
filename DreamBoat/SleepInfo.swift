@@ -19,24 +19,24 @@ struct SleepInfo: View {
             {
                 
                 GetTopText()
-                .padding(.horizontal, 120)
+                    .padding(.horizontal, 120)
                 
                 HStack{
                     
                     //Left Buttons
                     VStack{
                         InfoButton(buttonText: "Why is sleep Important?")
-                        InfoButton(buttonText: "Why is sleep Important?")
-                        InfoButton(buttonText: "Why is sleep Important?")
+                        InfoButton(buttonText: "How much sleep do I need?")
+                        InfoButton(buttonText: "What is sleep debt?")
                         
                     }
                     .padding(.horizontal, 120)
                     
                     //Right Buttons
                     VStack{
-                        InfoButton(buttonText: "Why is sleep Important?")
-                        InfoButton(buttonText: "Why is sleep Important?")
-                        InfoButton(buttonText: "Why is sleep Important?")
+                        InfoButton(buttonText: "How do I get quality sleep?")
+                        InfoButton(buttonText: "Can I adapt to less sleep?")
+                        InfoButton(buttonText: "Can I oversleep?")
                     }
                     .padding(.horizontal, -120)
                     
@@ -84,17 +84,17 @@ struct SleepInfo: View {
     
     func InfoButton(buttonText: String) -> some View {
         Button {}
-                       label:
-                        {
+    label:
+        {
             Text(buttonText)
                 .frame(maxWidth: .infinity)
         }
-            .font(.subheadline)
-            .frame(width: 350, height: 50.0)
-            .foregroundColor(.black)
-            .buttonStyle(.borderedProminent)
-            .buttonBorderShape(.roundedRectangle)
-            .controlSize(.large)
+        .font(.subheadline)
+        .frame(width: 350, height: 50.0)
+        .foregroundColor(.black)
+        .buttonStyle(.borderedProminent)
+        .buttonBorderShape(.roundedRectangle)
+        .controlSize(.large)
     }
     
     struct SleepInfo_Previews: PreviewProvider {
