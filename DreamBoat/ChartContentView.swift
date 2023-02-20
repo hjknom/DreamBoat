@@ -58,7 +58,7 @@ struct ChartContentView: View {
                }
              }
           }
-        }
+         }
 
 struct ChartContentView_Previews: PreviewProvider {
     static var previews: some View {
