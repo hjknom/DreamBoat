@@ -9,12 +9,14 @@ struct ChartContentView: View {
     ]
     var body: some View {
     ZStack {
-        Color(red: 0.707, green: 0.742, blue: 0.925).edgesIgnoringSafeArea(.all)
+        DrawBackgroundClouds()
+
+//        Color(red: 0.707, green: 0.742, blue: 0.925).edgesIgnoringSafeArea(.all)
         VStack {
             Text("SLEEP SCHEDULE")
                 .font(.system(size: 28))
                 .fontWeight(.heavy)
-                .foregroundColor(Color(.white))
+                .foregroundColor(Color(.black))
             
             HStack(spacing: 15) {
                 ChartView(value: dataPoints[pickerSelectedItem][0], week: "Monday")
@@ -32,11 +34,34 @@ struct ChartContentView: View {
             Text("Week 2").tag(1)
             Text("Weel 3").tag(2)
             }.pickerStyle(SegmentedPickerStyle())
-            .padding(.horizontal, 24)
+            .padding(.horizontal, 100)
+//            .background(Color.white)
             }
          }
       }
     }
+
+func DrawBackgroundClouds() -> some View{
+    
+    ZStack{
+        let cloudWidth: CGFloat = 930
+        let cloudheight: CGFloat = 415
+        
+        Image("CloudBG_1")
+            .resizable()
+            .frame(width: cloudWidth, height: cloudheight)
+        Image("CloudBG_2")
+            .resizable()
+            .frame(width: cloudWidth, height: cloudheight)
+        Image("CloudBG_3")
+            .resizable()
+            .frame(width: cloudWidth, height: cloudheight)
+        Image("CloudBG_4")
+            .resizable()
+            .frame(width: cloudWidth, height: cloudheight)
+    }
+}
+
     struct ChartContentView_Previews: PreviewProvider {
     static var previews: some View {
     ChartContentView()
