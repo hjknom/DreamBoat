@@ -1,5 +1,8 @@
-////  ChartView.swift
-//  DreamBoat
+//
+//  ChartView.swift
+//  ChartDemo
+//
+//  Created by Avinash Singh on 17/2/2023.
 //
 //  Created by Katrina Danaskos on 21/2/2023. --> with the help of Avinash :)
 
@@ -7,38 +10,41 @@ import SwiftUI
 
 struct ChartView: View {
     
-    
     var value: CGFloat = 0
     var week: String = ""
-    var body: some View {
+//    var barColor: Color = Color.brown
+    
+    
+    @State private var pickerSelectedItem = 0
+    @State private var dataPoints: [[CGFloat]] = [
+        [160, 120, 160, 150, 120, 180, 150],   //week mulitply by 20
+        [100, 120, 200, 170, 180, 190, 110],  //month
+        [150, 170, 180, 0.1, 0.1, 0.1, 0.1]  //year
+    ]
+    
         
-    VStack {
-    Spacer()
+        var body: some View {
         
-    ZStack(alignment: .bottom) {
-        
-    Capsule().frame(width: 40, height: value)
-    .foregroundColor(.white)
-
-        Capsule().frame(width: 30, height: value)
-        .foregroundColor(.white)
-
-        Capsule().frame(width: 30, height: value)
-        .foregroundColor(.white)
-
-        Capsule().frame(width: 30, height: value)
-        .foregroundColor(.white)
-
-      }
-    Text(week)
-        //Text("TEST").ali
-        //go look at the circle example firas showed us to move up the  hours label on top of the column
-
+            
+//            if (value <= 110){
+//                barColor
+//            }
+            
+        //print(dataPoints[0][0].description)
+        VStack {
+            
+        ZStack(alignment: .bottom) {
+        Rectangle().frame(width: 80, height: value)
+                .foregroundColor((value <= 120) ? Color.red : Color.brown)
+                .overlay(RoundedRectangle(cornerRadius: 7).stroke(Color.black, lineWidth: 3))
         }
-      }
-    
+            
+        
+        Text(week)
+            
+            }
+        }
 }
-    
     
 struct ChartView_Previews: PreviewProvider {
     static var previews: some View {
