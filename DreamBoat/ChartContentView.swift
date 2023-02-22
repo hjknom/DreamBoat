@@ -22,35 +22,35 @@ struct ChartContentView: View {
                         .foregroundColor(Color(.black))
                     
                     HStack(spacing: 15) {
-                        
-//                        NavigationLink(destination: DayInfo()){
+                     
                             ChartView(value: dataPoints[pickerSelectedItem][0], week: "Monday")
-//                        }.foregroundColor(Color.black)
-                        
-//                        NavigationLink(destination: DayInfo()){
+                            .onTapGesture {
+                                withAnimation {self.show.toggle()}
+                            }
                             ChartView(value: dataPoints[pickerSelectedItem][1], week: "Tuesday")
-//                        }.foregroundColor(Color.black)
-                        
-//                        NavigationLink(destination: DayInfo()){
+                            .onTapGesture {
+                                withAnimation {self.show.toggle()}
+                            }
                             ChartView(value: dataPoints[pickerSelectedItem][2], week: "Wednesday")
-//                        }.foregroundColor(Color.black)
-                        
-//                        NavigationLink(destination: DayInfo()){
+                            .onTapGesture {
+                                withAnimation {self.show.toggle()}
+                            }
                             ChartView(value: dataPoints[pickerSelectedItem][3], week: "Thursday")
-//                        }.foregroundColor(Color.black)
-                        
-//                        NavigationLink(destination: DayInfo()){
+                            .onTapGesture {
+                                withAnimation {self.show.toggle()}
+                            }
                             ChartView(value: dataPoints[pickerSelectedItem][4], week: "Friday")
-//                        }.foregroundColor(Color.black)
-                        
-//                        NavigationLink(destination: DayInfo()){
+                            .onTapGesture {
+                                withAnimation {self.show.toggle()}
+                            }
                             ChartView(value: dataPoints[pickerSelectedItem][5], week: "Saturday")
-//                        }.foregroundColor(Color.black)
-                      
-//                        NavigationLink(destination: DayInfo()){
+                            .onTapGesture {
+                                withAnimation {self.show.toggle()}
+                            }
                             ChartView(value: dataPoints[pickerSelectedItem][6], week: "Sunday")
-//                        }.foregroundColor(Color.black)
-
+                            .onTapGesture {
+                                withAnimation {self.show.toggle()}
+                            }
                     }.padding(.top, 10)
                         .animation(.default)
                     
@@ -60,19 +60,20 @@ struct ChartContentView: View {
                         Text("Weel 3").tag(2)
                     }.pickerStyle(SegmentedPickerStyle())
                         .padding(.horizontal, 100)
-                    //            .background(Color.white)
                 }
                 
-                GeometryReader{_ in
-                    PopUp()
-                }.background(Color.black.opacity(0.65)
-                    .edgesIgnoringSafeArea(.all)
-                    .onTapGesture{
-                        withAnimation{
-                            self.show.toggle()
+                if self.show {
+                    GeometryReader{_ in
+                        PopUp()
+                    }.background(Color.black.opacity(0.65)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture{
+                            withAnimation{
+                                self.show.toggle()
+                            }
                         }
-                    }
-                )
+                    )
+                }
             }
         }
         
@@ -110,13 +111,15 @@ struct PopUp : View {
     var body : some View {
         VStack(alignment: .leading, spacing: 15){
             Text("Monday")
-            Text("Sleep Duration: ")
-            Text("Bed Time: ")
-            Text("Sleep Score: ")
+            Text("Sleep Duration:")
+            Text("Bed Time:")
+            Text("Sleep Score:")
             Text("Notes:")
             Text("- Try winding down 30 minutes before your sleeping goal")
             Text("- Getting to sleep the same time every night can help create a helpful routine")
-        }
+        }.padding()
+        .background(Color.white)
+        .cornerRadius(15)
     }
 }
 
