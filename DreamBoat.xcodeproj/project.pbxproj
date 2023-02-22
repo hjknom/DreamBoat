@@ -15,6 +15,7 @@
 		30461167299E47C5009C931B /* MainBoat.sks in Resources */ = {isa = PBXBuildFile; fileRef = 30461166299E47C5009C931B /* MainBoat.sks */; };
 		DC593CDA29A42C2B006A2104 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC593CD929A42C2B006A2104 /* ChartView.swift */; };
 		DC593CDC29A42C3C006A2104 /* ChartContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC593CDB29A42C3C006A2104 /* ChartContentView.swift */; };
+		DC593D1C29A5B0FC006A2104 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC593D1B29A5B0FC006A2104 /* LineGraph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		30461166299E47C5009C931B /* MainBoat.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainBoat.sks; sourceTree = "<group>"; };
 		DC593CD929A42C2B006A2104 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		DC593CDB29A42C3C006A2104 /* ChartContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContentView.swift; sourceTree = "<group>"; };
+		DC593D1B29A5B0FC006A2104 /* LineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				30461166299E47C5009C931B /* MainBoat.sks */,
 				DC593CD929A42C2B006A2104 /* ChartView.swift */,
 				DC593CDB29A42C3C006A2104 /* ChartContentView.swift */,
+				DC593D1B29A5B0FC006A2104 /* LineGraph.swift */,
 				055B65F6299DA585000EEF67 /* Assets.xcassets */,
 				055B65F8299DA585000EEF67 /* Preview Content */,
 			);
@@ -154,6 +157,7 @@
 				055B65F5299DA585000EEF67 /* ContentView.swift in Sources */,
 				055B65F3299DA585000EEF67 /* DreamBoatApp.swift in Sources */,
 				30461165299DB54F009C931B /* SleepInfo.swift in Sources */,
+				DC593D1C29A5B0FC006A2104 /* LineGraph.swift in Sources */,
 				DC593CDA29A42C2B006A2104 /* ChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
