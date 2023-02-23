@@ -65,7 +65,9 @@ struct ChartContentView: View {
                 if self.show {
                     GeometryReader{_ in
                         PopUp()
-                    }.background(Color.black.opacity(0.65)
+                    }
+                    .frame(width: 800, height: 400)
+                        .background(Color.black.opacity(0.50)
                         .edgesIgnoringSafeArea(.all)
                         .onTapGesture{
                             withAnimation{
@@ -109,17 +111,25 @@ struct ChartContentView: View {
 
 struct PopUp : View {
     var body : some View {
-        VStack(alignment: .leading, spacing: 15){
-            Text("Monday")
-            Text("Sleep Duration:")
-            Text("Bed Time:")
-            Text("Sleep Score:")
-            Text("Notes:")
-            Text("- Try winding down 30 minutes before your sleeping goal")
-            Text("- Getting to sleep the same time every night can help create a helpful routine")
-        }.padding()
-        .background(Color.white)
-        .cornerRadius(15)
+    
+        ZStack{
+            VStack(alignment: .center, spacing: 10){
+                Text("Friday")
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Sleep Duration: 6 hours 27 minutes")
+                Text("Bed Time: 11:45pm")
+                Text("Sleep Score: 57%")
+                Text("")
+                Text("Tips")
+                    .fontWeight(.bold)
+                Text("Try winding down 30 minutes before your sleeping goal")
+                Text("Getting to sleep the same time every night can help create a helpful routine")
+            }.padding(50)
+                .background(Color.white)
+                .cornerRadius(15)
+                .offset(x: 60, y:40)
+        }
     }
 }
 
