@@ -3,6 +3,7 @@ import SwiftUI
 struct ChartContentView: View {
     @State private var pickerSelectedItem = 0
     @State var show = false
+    @State var back = false
     @State private var dataPoints: [[CGFloat]] = [
         [160, 120, 160, 150, 120, 180, 150],   //week mulitply by 20
         [100, 120, 200, 170, 180, 190, 110],  //month
@@ -13,6 +14,16 @@ struct ChartContentView: View {
             ZStack {
                                 
                 DrawBackgroundClouds()
+                
+                Image("BackButton")
+                    .resizable()
+                    .frame(width: 55, height: 55)
+                    .offset(x: -365, y: -130)
+                    .onTapGesture {
+                        withAnimation {
+                            self.back.toggle()
+                        }
+                    }
                 
                 VStack {
                     
@@ -72,6 +83,21 @@ struct ChartContentView: View {
                         .onTapGesture{
                             withAnimation{
                                 self.show.toggle()
+                            }
+                        }
+                    )
+                }
+                
+                if self.back {
+                    GeometryReader{_ in
+                        BoatScreen()
+                    }
+                    .frame(width: 800, height: 400)
+                        .background(Color.black.opacity(0.30)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture{
+                            withAnimation{
+                                self.back.toggle()
                             }
                         }
                     )

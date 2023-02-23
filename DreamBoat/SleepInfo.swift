@@ -8,13 +8,27 @@
 import SwiftUI
 
 struct SleepInfo: View {
+    
+    @State var back = false
+    
     var body: some View{
         NavigationView
         {
         
         ZStack {
             
+            
             DrawBackgroundClouds()
+            
+            Image("BackButton")
+                .resizable()
+                .frame(width: 55, height: 55)
+                .offset(x: -365, y: -130)
+                .onTapGesture {
+                    withAnimation {
+                        self.back.toggle()
+                    }
+                }
             
             VStack (alignment: .leading)
             {
@@ -136,6 +150,21 @@ struct SleepInfo: View {
                     .padding(.horizontal, -120)
                     
                 }
+            
+            if self.back {
+                GeometryReader{_ in
+                    BoatScreen()
+                }
+                .frame(width: 800, height: 400)
+                    .background(Color.black.opacity(0.30)
+                    .edgesIgnoringSafeArea(.all)
+                    .onTapGesture{
+                        withAnimation{
+                            self.back.toggle()
+                        }
+                    }
+                )
+            }
                 
             }
         }
