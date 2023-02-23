@@ -30,7 +30,7 @@ struct SleepDetails: View {
                 .resizable()
                 .frame(width:800, height: 300)
                 .offset(x:10, y: 10)
-            Text("Maintaining Good Sleep")
+            Text("Why is sleep important?")
                 .offset(y:-90)
                 .font(.custom("AmericanTypewriter", size:30))
             Text("It is thought that sleep aids in both physical and mental organisation of the body. Simply said, you need to sleep in order for your body and mind to work effectively.The immunological system, heart, blood vessels, and the immune system are all thought to benefit from sleep. It promotes healing and growth while assisting with appetite and weight regulation. Sleep helps with focus, memory, and learning.")

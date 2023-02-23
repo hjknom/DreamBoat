@@ -32,13 +32,20 @@ struct SleepManagement: View {
                     .resizable()
                     .frame(width:800, height: 300)
                     .offset(x:10, y: 10)
-                Text("Maintaining Good Sleep")
-                    .offset(y:-90)
+                VStack {
+                    Text("Maintaining Good Sleep")
+                        .offset(y:-90)
                     .font(.custom("AmericanTypewriter", size:30))
+                }
                     Text("You can achieve more quality sleep by practising good sleep hygiene, often known as good sleep habits.")
                     .frame(width:600, height:400)
-                    .offset(x:20,y:25)
+                    .offset(x:20,y:-25)
                     .font(.custom("AmericanTypewriter", size:20))
+                   Text("Do:")
+                    .offset(x:-200, y:15)
+                   Text("* Have a sleep schedule")
+                    .offset(x:-200, y:40)
+                
                 
                 }
             }
