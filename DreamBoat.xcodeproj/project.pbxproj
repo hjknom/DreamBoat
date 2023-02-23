@@ -7,20 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0506E7B729A42E370018CDD1 /* SleepTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E7B629A42E370018CDD1 /* SleepTime.swift */; };
+		0506E7BB29A57E190018CDD1 /* SleepDept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E7BA29A57E190018CDD1 /* SleepDept.swift */; };
+		0506E7BD29A57E670018CDD1 /* LessSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E7BC29A57E670018CDD1 /* LessSleep.swift */; };
+		0506E7BF29A57EA10018CDD1 /* SleepFactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E7BE29A57EA10018CDD1 /* SleepFactors.swift */; };
+		0506E7C129A57ED60018CDD1 /* SleepManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506E7C029A57ED60018CDD1 /* SleepManagement.swift */; };
 		055B65F3299DA585000EEF67 /* DreamBoatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055B65F2299DA585000EEF67 /* DreamBoatApp.swift */; };
 		055B65F5299DA585000EEF67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055B65F4299DA585000EEF67 /* ContentView.swift */; };
 		055B65F7299DA585000EEF67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 055B65F6299DA585000EEF67 /* Assets.xcassets */; };
 		055B65FA299DA585000EEF67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 055B65F9299DA585000EEF67 /* Preview Assets.xcassets */; };
+		05BF387A29A2DCBD008D9917 /* SleepDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BF387929A2DCBD008D9917 /* SleepDetails.swift */; };
 		30461165299DB54F009C931B /* SleepInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30461164299DB54F009C931B /* SleepInfo.swift */; };
 		30461167299E47C5009C931B /* MainBoat.sks in Resources */ = {isa = PBXBuildFile; fileRef = 30461166299E47C5009C931B /* MainBoat.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0506E7B629A42E370018CDD1 /* SleepTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTime.swift; sourceTree = "<group>"; };
+		0506E7BA29A57E190018CDD1 /* SleepDept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepDept.swift; sourceTree = "<group>"; };
+		0506E7BC29A57E670018CDD1 /* LessSleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessSleep.swift; sourceTree = "<group>"; };
+		0506E7BE29A57EA10018CDD1 /* SleepFactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepFactors.swift; sourceTree = "<group>"; };
+		0506E7C029A57ED60018CDD1 /* SleepManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepManagement.swift; sourceTree = "<group>"; };
 		055B65EF299DA585000EEF67 /* DreamBoat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamBoat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		055B65F2299DA585000EEF67 /* DreamBoatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamBoatApp.swift; sourceTree = "<group>"; };
 		055B65F4299DA585000EEF67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		055B65F6299DA585000EEF67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		055B65F9299DA585000EEF67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		05BF387929A2DCBD008D9917 /* SleepDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepDetails.swift; sourceTree = "<group>"; };
 		30461164299DB54F009C931B /* SleepInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepInfo.swift; sourceTree = "<group>"; };
 		30461166299E47C5009C931B /* MainBoat.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainBoat.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +70,12 @@
 				055B65F2299DA585000EEF67 /* DreamBoatApp.swift */,
 				055B65F4299DA585000EEF67 /* ContentView.swift */,
 				30461164299DB54F009C931B /* SleepInfo.swift */,
+				0506E7C029A57ED60018CDD1 /* SleepManagement.swift */,
+				0506E7BE29A57EA10018CDD1 /* SleepFactors.swift */,
+				0506E7BC29A57E670018CDD1 /* LessSleep.swift */,
+				0506E7BA29A57E190018CDD1 /* SleepDept.swift */,
+				0506E7B629A42E370018CDD1 /* SleepTime.swift */,
+				05BF387929A2DCBD008D9917 /* SleepDetails.swift */,
 				30461166299E47C5009C931B /* MainBoat.sks */,
 				055B65F6299DA585000EEF67 /* Assets.xcassets */,
 				055B65F8299DA585000EEF67 /* Preview Content */,
@@ -144,8 +162,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0506E7BF29A57EA10018CDD1 /* SleepFactors.swift in Sources */,
+				0506E7B729A42E370018CDD1 /* SleepTime.swift in Sources */,
+				0506E7C129A57ED60018CDD1 /* SleepManagement.swift in Sources */,
+				05BF387A29A2DCBD008D9917 /* SleepDetails.swift in Sources */,
 				055B65F5299DA585000EEF67 /* ContentView.swift in Sources */,
 				055B65F3299DA585000EEF67 /* DreamBoatApp.swift in Sources */,
+				0506E7BD29A57E670018CDD1 /* LessSleep.swift in Sources */,
+				0506E7BB29A57E190018CDD1 /* SleepDept.swift in Sources */,
 				30461165299DB54F009C931B /* SleepInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
