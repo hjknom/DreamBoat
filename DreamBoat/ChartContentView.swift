@@ -126,9 +126,11 @@ struct PopUp : View {
                 Text("Try winding down 30 minutes before your sleeping goal")
                 Text("Getting to sleep the same time every night can help create a helpful routine")
             }.padding(50)
-                .background(Color.white)
+                .background(Color(hue: 0.08, saturation: 0.362, brightness: 0.953))
                 .cornerRadius(15)
+                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(hue: 0.095, saturation: 0.886, brightness: 0.403), lineWidth: 12))
                 .offset(x: 60, y:40)
+
         }
     }
 }
