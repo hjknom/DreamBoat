@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct SleepInfo: View {
-    var body: some View
-    {
+    var body: some View{
+        NavigationView
+        {
         
         ZStack {
             
@@ -23,20 +24,114 @@ struct SleepInfo: View {
                 
                 HStack{
                     
+                        
+                    
                     //Left Buttons
-                    VStack{
-                        InfoButton(buttonText: "Why is sleep Important?")
-                        InfoButton(buttonText: "How much sleep do I need?")
-                        InfoButton(buttonText: "What is sleep debt?")
+                        VStack {
+                            HStack {
+                                NavigationLink(destination:SleepDetails()) {
+                                    
+                                    Text("Why is sleep important?")
+                                        .font(.subheadline)
+                                        .fontWeight(.bold)
+                                        .frame(width: 250, height: 50.0)
+                                        .foregroundColor(.black)
+                                        .buttonStyle(.borderedProminent)
+                                        .buttonBorderShape(.roundedRectangle)
+                                        .controlSize(.large)
+                                        .tint(Color(red: 0.707, green: 0.742, blue: 0.925))
+                                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 3))
+                                        .offset(x:150)
+                                }
+                                NavigationLink(destination: SleepTime()){
+                                    Text("How much sleep?")
+                                        .font(.subheadline)
+                                        .fontWeight(.bold)
+                                        .frame(width: 250, height: 50.0)
+                                        .foregroundColor(.black)
+                                        .buttonStyle(.borderedProminent)
+                                        .buttonBorderShape(.roundedRectangle)
+                                        .controlSize(.large)
+                                        .tint(Color(red: 0.707, green: 0.742, blue: 0.925))
+                                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 3))
+                                        .offset(x:150)
+                                }
+                            }.padding(.all)
+                                .offset(x:45, y:50)
+                            HStack {
+                                NavigationLink(destination:SleepDept()) {
+                                    
+                                    Text("What is sleep dept?")
+                                        .font(.subheadline)
+                                        .fontWeight(.bold)
+                                        .frame(width: 250, height: 50.0)
+                                        .foregroundColor(.black)
+                                        .buttonStyle(.borderedProminent)
+                                        .buttonBorderShape(.roundedRectangle)
+                                        .controlSize(.large)
+                                        .tint(Color(red: 0.707, green: 0.742, blue: 0.925))
+                                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 3))
+                                        .offset(x:150)
+                                }
+                                NavigationLink(destination: LessSleep()){
+                                    Text("Can we adapt to needing less sleep?")
+                                        .font(.subheadline)
+                                        .fontWeight(.bold)
+                                        .frame(width: 250, height: 50.0)
+                                        .foregroundColor(.black)
+                                        .buttonStyle(.borderedProminent)
+                                        .buttonBorderShape(.roundedRectangle)
+                                        .controlSize(.large)
+                                        .tint(Color(red: 0.707, green: 0.742, blue: 0.925))
+                                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 3))
+                                        .offset(x:150)
+                                }
+                            }.padding()
+                                .offset(x:45,y:35)
+                            
+                            
+                            HStack {
+                                
+                                NavigationLink(destination:SleepFactors()) {
+                                    
+                                    Text("Factors that affect sleep")
+                                        .font(.subheadline)
+                                        .fontWeight(.bold)
+                                        .frame(width: 250, height: 50.0)
+                                        .foregroundColor(.black)
+                                        .buttonStyle(.borderedProminent)
+                                        .buttonBorderShape(.roundedRectangle)
+                                        .controlSize(.large)
+                                        .tint(Color(red: 0.707, green: 0.742, blue: 0.925))
+                                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 3))
+                                        .offset(x:150)
+                                }
+                                
+                                NavigationLink(destination: SleepManagement()){
+                                    Text("Maintaining good sleep")
+                                        .font(.subheadline)
+                                        .fontWeight(.bold)
+                                        .frame(width: 250, height: 50.0)
+                                        .foregroundColor(.black)
+                                        .buttonStyle(.borderedProminent)
+                                        .buttonBorderShape(.roundedRectangle)
+                                        .controlSize(.large)
+                                        .tint(Color(red: 0.707, green: 0.742, blue: 0.925))
+                                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 3))
+                                        .offset(x:150)
+                                }
+                            }.padding(.all)
+                                .offset(x:45,y:20)
+                        }
+                    
+                                            
                         
                     }
-                    .padding(.horizontal, 120)
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .frame(width: /*@START_MENU_TOKEN@*/500.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/)
                     
-                    //Right Buttons
+                    
                     VStack{
-                        InfoButton(buttonText: "How do I get quality sleep?")
-                        InfoButton(buttonText: "Can I adapt to less sleep?")
-                        InfoButton(buttonText: "Can I oversleep?")
                     }
                     .padding(.horizontal, -120)
                     
@@ -76,9 +171,11 @@ struct SleepInfo: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.black)
+                .offset(y:-25)
             
             Text("A good night's sleep can help with problem resolution, stress management, and health recovery. Your physical and mental health may suffer as a result of sleep deprivation in many different ways.")
                 .font(.body)
+                .offset(y:-20)
         }
     }
     
