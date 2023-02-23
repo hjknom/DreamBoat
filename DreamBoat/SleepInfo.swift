@@ -181,15 +181,22 @@ struct SleepInfo: View {
             Image("CloudBG_1")
                 .resizable()
                 .frame(width: cloudWidth, height: cloudheight)
+                .offset(y:28)
             Image("CloudBG_2")
                 .resizable()
                 .frame(width: cloudWidth, height: cloudheight)
+                .offset(y:28)
+
             Image("CloudBG_3")
                 .resizable()
                 .frame(width: cloudWidth, height: cloudheight)
+                .offset(y:28)
+
             Image("CloudBG_4")
                 .resizable()
                 .frame(width: cloudWidth, height: cloudheight)
+                .offset(y:28)
+
         }
     }
     
