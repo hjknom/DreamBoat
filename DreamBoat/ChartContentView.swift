@@ -67,7 +67,7 @@ struct ChartContentView: View {
                         PopUp()
                     }
                     .frame(width: 800, height: 400)
-                        .background(Color.black.opacity(0.50)
+                        .background(Color.black.opacity(0.30)
                         .edgesIgnoringSafeArea(.all)
                         .onTapGesture{
                             withAnimation{
@@ -126,10 +126,11 @@ struct PopUp : View {
                 Text("Try winding down 30 minutes before your sleeping goal")
                 Text("Getting to sleep the same time every night can help create a helpful routine")
             }.padding(50)
-                .background(Color(hue: 0.08, saturation: 0.362, brightness: 0.953))
+                .background(Color(red: 0.998, green: 0.87, blue: 0.79))
                 .cornerRadius(15)
-                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(hue: 0.095, saturation: 0.886, brightness: 0.403), lineWidth: 12))
+                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(red: 0.659, green: 0.61, blue: 0.79), lineWidth: 12))
                 .offset(x: 60, y:40)
+            
 
         }
     }
