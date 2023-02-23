@@ -3,6 +3,7 @@ import SwiftUI
 struct ChartContentView: View {
     @State private var pickerSelectedItem = 0
     @State var show = false
+    @State var back = false
     @State private var dataPoints: [[CGFloat]] = [
         [160, 120, 160, 150, 120, 180, 150],   //week mulitply by 20
         [100, 120, 200, 170, 180, 190, 110],  //month
@@ -13,6 +14,16 @@ struct ChartContentView: View {
             ZStack {
                                 
                 DrawBackgroundClouds()
+                
+                Image("BackButton")
+                    .resizable()
+                    .frame(width: 55, height: 55)
+                    .offset(x: -365, y: -130)
+                    .onTapGesture {
+                        withAnimation {
+                            self.back.toggle()
+                        }
+                    }
                 
                 VStack {
                     
@@ -65,11 +76,28 @@ struct ChartContentView: View {
                 if self.show {
                     GeometryReader{_ in
                         PopUp()
-                    }.background(Color.black.opacity(0.65)
+                    }
+                    .frame(width: 800, height: 400)
+                        .background(Color.black.opacity(0.30)
                         .edgesIgnoringSafeArea(.all)
                         .onTapGesture{
                             withAnimation{
                                 self.show.toggle()
+                            }
+                        }
+                    )
+                }
+                
+                if self.back {
+                    GeometryReader{_ in
+                        BoatScreen()
+                    }
+                    .frame(width: 800, height: 400)
+                        .background(Color.black.opacity(0.30)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture{
+                            withAnimation{
+                                self.back.toggle()
                             }
                         }
                     )
@@ -109,17 +137,28 @@ struct ChartContentView: View {
 
 struct PopUp : View {
     var body : some View {
-        VStack(alignment: .leading, spacing: 15){
-            Text("Monday")
-            Text("Sleep Duration:")
-            Text("Bed Time:")
-            Text("Sleep Score:")
-            Text("Notes:")
-            Text("- Try winding down 30 minutes before your sleeping goal")
-            Text("- Getting to sleep the same time every night can help create a helpful routine")
-        }.padding()
-        .background(Color.white)
-        .cornerRadius(15)
+    
+        ZStack{
+            VStack(alignment: .center, spacing: 10){
+                Text("Friday")
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Sleep Duration: 6 hours 27 minutes")
+                Text("Bed Time: 11:45pm")
+                Text("Sleep Score: 57%")
+                Text("")
+                Text("Tips")
+                    .fontWeight(.bold)
+                Text("Try winding down 30 minutes before your sleeping goal")
+                Text("Getting to sleep the same time every night can help create a helpful routine")
+            }.padding(50)
+                .background(Color(red: 0.998, green: 0.87, blue: 0.79))
+                .cornerRadius(15)
+                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(red: 0.659, green: 0.61, blue: 0.79), lineWidth: 12))
+                .offset(x: 60, y:40)
+            
+
+        }
     }
 }
 
