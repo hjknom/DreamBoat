@@ -52,7 +52,7 @@ let stepData = [
     (period: "Current Week", data: currentWeek),
     (period: "Previous Week", data: previousWeek)
 ]
-hghdfghfgh
+
 struct LineGraph: View {
     var body: some View {
         VStack {
