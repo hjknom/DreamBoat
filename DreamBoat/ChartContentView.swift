@@ -68,7 +68,7 @@ struct ChartContentView: View {
                     Picker(selection: $pickerSelectedItem, label: Text("")) {
                         Text("Week 1").tag(0)
                         Text("Week 2").tag(1)
-                        Text("Weel 3").tag(2)
+                        Text("Week 3").tag(2)
                     }.pickerStyle(SegmentedPickerStyle())
                         .padding(.horizontal, 100)
                 }
